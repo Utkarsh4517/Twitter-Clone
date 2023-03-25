@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/common/rounded_small_button.dart';
 import 'package:twitter_clone/constants/ui_constants.dart';
@@ -54,7 +55,30 @@ class _LoginViewState extends State<LoginView> {
                     label: 'Done',
                   ),
                 ),
+                const SizedBox(
+                  height: 40,
+                ),
                 //textspan
+                RichText(
+                  text:  TextSpan(
+                    text: "Don't have an account?",
+                    style: const TextStyle(
+                      fontSize: 16,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: " Sign Up",
+                        style: const TextStyle(
+                          color: Pallete.blueColor,
+                          fontSize: 16,
+                        ),
+                        recognizer: TapGestureRecognizer()..onTap = () {
+                          
+                        }
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
