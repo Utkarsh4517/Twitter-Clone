@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/common/rounded_small_button.dart';
 import 'package:twitter_clone/constants/ui_constants.dart';
 import 'package:twitter_clone/features/auth/widgets/auth_field.dart';
+import 'package:twitter_clone/theme/theme.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -31,14 +33,27 @@ class _LoginViewState extends State<LoginView> {
             child: Column(
               children: [
                 //textfield1
-                AuthField(controller: emailController, hintText: 'Email address'),
+                AuthField(
+                    controller: emailController, hintText: 'Email address'),
                 //textfield2
-                const SizedBox(height: 25,),
+                const SizedBox(
+                  height: 25,
+                ),
                 AuthField(
                   controller: passwordController,
                   hintText: 'Password ',
                 ),
+                const SizedBox(
+                  height: 40,
+                ),
                 //button
+                Align(
+                  alignment: Alignment.topRight,
+                  child: RoundedSmallButton(
+                    onTap: () {},
+                    label: 'Done',
+                  ),
+                ),
                 //textspan
               ],
             ),
